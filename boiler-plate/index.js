@@ -3,6 +3,7 @@ const app = express()
 const port = 5000
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
+const {auth} = require('./middleware/auth')
 const {User} = require("./models/User")
 
 const config = require('./config/key')
@@ -24,7 +25,7 @@ mongoose.connect(config.mongoURI, {
 
 app.get('/', (req, res) => res.send('Hello World!~~~!!!'))
 
-app.post('/register', (req, res) => {
+app.post('/api/users/register', (req, res) => {
     //When I get the information I need to sign up from the client,
     //Put them in the database.
     const user = new User(req.body)
@@ -60,6 +61,19 @@ app.post('/login', (req, res) => {
                     .json({loginSuccess: true, userId: user._id})
             })
         })
+    })
+})
+
+app.get('/api/users/auth', auth, (req, res) => {
+    res.status(200).json({
+        _id: req.user._id,
+        isAdmin: req.user.role === 0 ? false : true,
+        isAuth: true,
+        email: req.user.email,
+        name: req.user.name,
+        lastname: req.user.lastnmae,
+        role: req.user.role,
+        image: req.user.image
     })
 })
 
