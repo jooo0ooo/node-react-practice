@@ -17,7 +17,7 @@ mongoose.connect('mongodb connecting info...', {
   .catch(err => console.log(err))
 
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', (req, res) => res.send('Hello World!~~~!!!'))
 
 app.post('/register', (req, res) => {
     //When I get the information I need to sign up from the client,
