@@ -3,8 +3,8 @@ const app = express()
 const port = 5000
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
-const {auth} = require('./server/middleware/auth')
-const {User} = require("./server/models/User")
+const {auth} = require('./middleware/auth')
+const {User} = require("./models/User")
 
 const config = require('./config/key')
 
@@ -24,6 +24,10 @@ mongoose.connect(config.mongoURI, {
 
 
 app.get('/', (req, res) => res.send('Hello World!~~~!!!'))
+
+app.get('/api/hello', (req, res) => {
+    res.send("Hello~")
+})
 
 app.post('/api/users/register', (req, res) => {
     //When I get the information I need to sign up from the client,
