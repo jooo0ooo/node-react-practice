@@ -41,7 +41,7 @@ app.post('/api/users/register', (req, res) => {
     })
 })
 
-app.post('/login', (req, res) => {
+app.post('/api/users/login', (req, res) => {
     //find email
     User.findOne({email: req.body.email}, (err, user) => {
         if(!user) {
