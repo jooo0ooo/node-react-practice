@@ -23,6 +23,9 @@ function VideoUploadPage() {
     const [Description, setDescription] = useState("")
     const [Private, setPrivate] = useState(0)
     const [Category, setCategory] = useState("Film & Animation")
+    const [FilePath, setFilePath] = useState("")
+    const [Duration, setDuration] = useState("")
+    const [ThumbnailPath, setThumbnailPath] = useState("")
 
     const onTitleChange = (e) => {
         setVideoTitle(e.currentTarget.value)
@@ -51,8 +54,25 @@ function VideoUploadPage() {
             .then(response => {
                 if (response.data.success) {
                     console.log(response.data)
+
+                    let variable = {
+                        url: response.data.url,
+                        fileName: response.data.fileName
+                    }
+
+                    setFilePath(response.data.url)
+
+                    Axios.post('/api/video/thumbnail', variable)
+                        .then(response => {
+                            if (response.data.success) {
+                                setDuration(response.data.fileDuration)
+                                setThumbnailPath(response.data.url)
+                            } else {
+                                alert('Failed to making thumbnail') 
+                            }
+                        })
                 } else {
-                    alert('Video Upload Failed')
+                    alert('Failed to upload video')
                 }
             })
     }
@@ -62,7 +82,7 @@ function VideoUploadPage() {
             <div style={{textAlign: "center", marginBottom: "2rem"}}>
                 <Title level={2}>Upload Video</Title>
             </div>
-            <Form onSubmit>
+            <Form>
                 <div style={{display: "flex", justifyContent: "space-between"}}>
                     {/* Drop Zone */}
                     <Dropzone
@@ -78,10 +98,13 @@ function VideoUploadPage() {
                             </div>
                         )}
                     </Dropzone>
+
                     {/* Thumbnail */}
-                    <div>
-                        <img />
-                    </div>
+                    {ThumbnailPath &&
+                        <div>
+                            <img src={`http://localhost:5000/${ThumbnailPath}`} alt="thumbnail"/>
+                        </div>
+                    }
                 </div>
                 <br />
                 <br />
@@ -118,7 +141,7 @@ function VideoUploadPage() {
                 <br />
                 <br />
 
-                <Button type="primary" size="large" onClick>
+                <Button type="primary" size="large">
                     Submit
                 </Button>
             </Form>
