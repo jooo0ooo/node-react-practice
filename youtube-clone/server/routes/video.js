@@ -42,7 +42,7 @@ router.post('/uploadVideo', (req, res) => {
 
     video.save((err, doc) => {
         if (err) return res.json({success: false, err})
-        res.status(200).json({success: true})
+        return res.status(200).json({success: true})
     })
 })
 
@@ -51,7 +51,16 @@ router.get('/getVideos', (req, res) => {
         .populate('writer')
         .exec((err, videos) => {
             if (err) return res.status(400).send(err)
-            res.status(200).json({success: true, videos})
+            return res.status(200).json({success: true, videos})
+        })
+})
+
+router.post('/getVideoDetail', (req, res) => {
+    Video.findOne({"_id": req.body.videoId})
+        .populate('writer')
+        .exec((err, videoDetail) => {
+            if (err) return res.status(400).send(err)
+            return res.status(200).json({success: true, videoDetail})
         })
 })
 
