@@ -130,6 +130,10 @@ common css
     width: 100%;
 }
 
+.maxHeight95 {
+    max-height: 95px;
+}
+
 .maxHeight120 {
     max-height: 120px;
 }

@@ -3,7 +3,7 @@ import { MdNotifications } from 'react-icons/md'
 import './CurrentBTC.css';
 function CurrentBTC() {
     return (
-        <div className="height15 bgWhite p15 commonBorderBottom">
+        <div className="height15 bgWhite p15 commonBorderBottom maxHeight95">
             <div className="height30"></div>
             <div className="height70">
                 <span className="priceSpan">
