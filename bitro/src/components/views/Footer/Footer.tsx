@@ -25,23 +25,40 @@ function Footer() {
                 transition: 'opacity 500ms linear, visibility 0s linear'
             });
         }
+
+        let els = document.getElementsByClassName('menu');
+        Array.prototype.forEach.call(els, function(el) {
+            if(el.classList.contains('active')) {
+                el.classList.remove('active');   
+            }
+        });
+
+        if (location.pathname === '/') {
+            document.getElementById('home')?.classList.add('active');
+        } else if (location.pathname === '/add') {
+            document.getElementById('add')?.classList.add('active');
+        } else if (location.pathname === '/mine') {
+            document.getElementById('mine')?.classList.add('active');
+        } else if (location.pathname === '/setting') {
+            document.getElementById('setting')?.classList.add('active');
+        }
     }, [location]);
 
     return (
         <nav className="footer" style={FooterCss}>
-            <Link className="menu" to="/">
+            <Link id="home" className="menu" to="/">
                 <MdHome /><br/>
                 홈
             </Link>
-            <Link className="menu" to="/add">
+            <Link id="add" className="menu" to="/add">
                 <MdAdd /><br />
                 글쓰기
             </Link>
-            <Link className="menu" to="/mine">
+            <Link id="mine" className="menu" to="/mine">
                 <MdCached /><br />
                 나의 거래
             </Link>
-            <Link className="menu" to="/setting">
+            <Link id="setting" className="menu" to="/setting">
                 <MdMenu /><br />
                 설정
             </Link>

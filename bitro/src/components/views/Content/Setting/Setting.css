@@ -18,6 +18,35 @@
     margin-bottom: 5%;
 }
 
+@media ( min-height: 1021px ) {
+    .settingMenuDiv {
+        height: 81%;
+    }
+    .settingMenuSecondSection {
+        height: 76%;
+    }   
+}
+
+@media ( max-height: 1020px ) and ( min-height: 878px ) {
+    .settingMenuDiv {
+        height: 75%;
+    }
+
+    .settingMenuSecondSection {
+        height: 71%
+    }
+}
+
+@media ( max-height: 877px ) {
+    .settingMenuDiv {
+        height: 67%;
+    }
+
+    .settingMenuSecondSection {
+        height: 65%;
+    }
+}
+
 .versionDiv {
     padding: 25px 20px;
     text-align: left;
@@ -33,7 +62,7 @@
 }
 
 .logoutDiv div {
-    margin-top: 15px;
+    margin-top: 30%;
     background-color: black;
     color: white;
     padding: 5px 10px;

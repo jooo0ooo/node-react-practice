@@ -17,6 +17,7 @@ html, body {
 
 .footer {
     max-width: 440px;
+    max-height: 65px;
     width: 100%;
     height: 8%;
     margin: 0 auto;
@@ -40,6 +41,18 @@ html, body {
     transform: scale(1.8);
     padding-top: 10%;
     font-size: 25px;
+}
+
+.menu:hover {
+    color: black;
+}
+
+.active {
+    color: black;
+}
+
+.active svg {
+    color: black;
 }
 
 .ant-select-selector {
@@ -115,6 +128,14 @@ common css
 
 .width100 {
     width: 100%;
+}
+
+.maxHeight120 {
+    max-height: 120px;
+}
+
+.maxHeight155 {
+    max-height: 155px;
 }
 
 .bgWhite {

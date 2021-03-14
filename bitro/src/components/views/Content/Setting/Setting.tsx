@@ -11,7 +11,7 @@ function Setting() {
         <div className="content">
             <div className="height15 bgWhite commonBorderBottom p15">
                 <div className="height30"></div>
-                <div className="height70">
+                <div className="height70 maxHeight120">
                     <div className="profileDiv">
                         <img src={process.env.PUBLIC_URL + '/joo.png'} />
                         <span>
@@ -26,7 +26,7 @@ function Setting() {
                     </div>
                 </div>
             </div>
-            <div className="height18 bgWhite commonBorderBottom">
+            <div className="height18 bgWhite commonBorderBottom maxHeight120">
                 <div className="height50">
                     <Myasset />
                 </div>
@@ -36,8 +36,8 @@ function Setting() {
                     <div>입출금 내역</div>
                 </div>
             </div>
-            <div className="height67 settingMenuDiv">
-                <div className="height40 bgWhite settingMenuFirstSection">
+            <div className="settingMenuDiv">
+                <div className="height40 bgWhite settingMenuFirstSection maxHeight155">
                     <SettingMenu leftOption="내 정보" rightOption="&gt;"/>
                     <br/>
 
@@ -47,7 +47,7 @@ function Setting() {
                     <SettingMenu leftOption="앱 설정" rightOption="&gt;"/>
                     <br/>
                 </div>
-                <div className="height60 bgWhite">
+                <div className="bgWhite settingMenuSecondSection">
                 <SettingMenu leftOption="공지사항" rightOption="&gt;"/>
                     <br/>
 

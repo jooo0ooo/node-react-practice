@@ -100,13 +100,15 @@ function AddTransaction() {
                     <Select className="width50" size={'large'} defaultValue="a1">
                         {saleList}
                     </Select>
-                    <RadioOption 
-                        defaultValue="sell"
-                        leftOptionValue="sell"
-                        leftOptionText="팝니다"
-                        rightOptionValue="buy"
-                        rightOptionText="삽니다"
-                    />
+                    <div className="addTransactionRadioDiv">
+                        <RadioOption 
+                            defaultValue="sell"
+                            leftOptionValue="sell"
+                            leftOptionText="팝니다"
+                            rightOptionValue="buy"
+                            rightOptionText="삽니다"
+                        />
+                    </div>
                 </div>
             </div>
             <div className="addDiv addDivSecond height75 bgWhite commonBorderBottom p15">

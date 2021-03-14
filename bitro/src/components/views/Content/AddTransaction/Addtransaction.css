@@ -55,13 +55,17 @@
     border: 1px solid white;
 }
 
-.radioDiv {
+.addTransactionRadioDiv {
+    display: inline;
+}
+
+.addTransactionRadioDiv .radioDiv {
     width: 50% !important;
     display: inline-block;
     padding: 0 !important;
 }
 
-.radioDiv div {
+.addTransactionRadioDiv .radioDiv div {
     width: 100%;
     padding: 2px;
     background-color: white !important;
