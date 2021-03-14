@@ -2,6 +2,9 @@ import React, { useState, createRef } from 'react'
 import { Select, Radio, Slider, Input, Tag } from 'antd';
 import { TweenOneGroup } from 'rc-tween-one';
 import { PlusOutlined } from '@ant-design/icons';
+import './AddTransaction.css';
+import RadioOption from '../Common/RadioOption';
+import Myasset from '../Common/Myasset';
 const { TextArea } = Input;
 
 function AddTransaction() {
@@ -81,53 +84,51 @@ function AddTransaction() {
 
     return (
         <div className="content">
-            <div style={{height: '15%', padding: '15px', borderBottom: '2px solid #ebebeb', backgroundColor: 'white'}}>
-                <div style={{height: '50%', borderBottom: '2px solid #ebebeb'}}></div>
-                <div style={{height: '50%', paddingTop: '5%'}}>
-                    <span style={{float: 'left', fontWeight: 'bold', color: 'red'}}>X</span>
+            <div className="height15 p15 commonBorderBottom bgWhite">
+                <div className="height50 commonBorderBottom"></div>
+                <div className="height50 addTransactionTitle">
+                    <span className="floatLeft">X</span>
                     <span>P2P 거래 글쓰기</span>
-                    <span style={{float: 'right', fontWeight: 'bold'}}>✓</span>
+                    <span className="floatRight">✓</span>
                 </div>
             </div>
-            <div style={{height: '20%', borderBottom: '2px solid #ebebeb', backgroundColor: 'white'}}>
-                <div style={{height: '50%', borderBottom: '2px solid #ebebeb', paddingTop: '2.5%'}}>
-                    <span style={{float: 'left', padding: '10px 20px'}}>나의 자산</span>
-                    <span style={{float: 'right', padding: '10px 20px', textAlign: 'right', fontWeight: 'bold', lineHeight: '17px'}}>
-                        <span>10.1010101010 BTC</span>
-                        <br />
-                        <span style={{fontSize: '13px', color: 'gray'}}>505050505050505050505050 KRW</span>
-                    </span>
+            <div className="height20 commonBorderBottom bgWhite">
+                <div className="myAssetDiv height50 commonBorderBottom">
+                    <Myasset />
                 </div>
-                <div className="addDiv" style={{height: '50%', paddingTop: '3.7%'}}>
-                    <Select size={'large'} defaultValue="a1" style={{ width: '50%' }}>
+                <div className="addDiv height50 addDivFirst">
+                    <Select className="width50" size={'large'} defaultValue="a1">
                         {saleList}
                     </Select>
-                    <Radio.Group defaultValue="buy" size="large">
-                        <Radio.Button value="buy">팝니다</Radio.Button>
-                        <Radio.Button value="sell">삽니다</Radio.Button>
-                    </Radio.Group>
+                    <RadioOption 
+                        defaultValue="sell"
+                        leftOptionValue="sell"
+                        leftOptionText="팝니다"
+                        rightOptionValue="buy"
+                        rightOptionText="삽니다"
+                    />
                 </div>
             </div>
-            <div className="addDiv" style={{height: '60%', backgroundColor: 'white', textAlign: 'left', borderBottom: '2px solid #ebebeb', padding: '15px'}}>
-                <div style={{marginBottom: '20px'}}>
+            <div className="addDiv addDivSecond height75 bgWhite commonBorderBottom p15">
+                <div className="addDivOption">
                     <span>수량</span>
                     <Input suffix="BTC" />
                 </div>
                 
-                <div style={{marginBottom: '40px'}}>
+                <div className="addDivOption addDivOptionDiff">
                     <span>현재가 대비</span>
                     <Input suffix="%" />
                     <Slider tipFormatter={null} marks={marks} included={false} defaultValue={50} />
                 </div>
                 
-                <div style={{marginBottom: '20px'}}>
+                <div className="addDivOption">
                     <span>결제 수단</span>
-                    <Select size={'large'} defaultValue="a1" style={{ width: '100%' }}>
+                    <Select className="width100" size={'large'} defaultValue="a1">
                         {paymentList}
                     </Select>
                 </div>
                 
-                <div style={{marginBottom: '20px'}}>
+                <div className="addDivOption">
                     <span>통장 사본</span>
                     <div></div>
                 </div>
@@ -158,13 +159,13 @@ function AddTransaction() {
                             <TweenOneGroup
                                 enter={{
                                     scale: 0.8,
-                                opacity: 0,
-                                type: 'from',
-                                duration: 100,
-                                onComplete: onComplete
-                            }}
-                            leave={{ opacity: 0, width: 0, scale: 0, duration: 200 }}
-                            appear={false}
+                                    opacity: 0,
+                                    type: 'from',
+                                    duration: 100,
+                                    onComplete: onComplete
+                                }}
+                                leave={{ opacity: 0, width: 0, scale: 0, duration: 200 }}
+                                appear={false}
                             >
                                 {tagChild}
                             </TweenOneGroup>
@@ -173,31 +174,31 @@ function AddTransaction() {
                 </div>
             </div>
 
-            <div style={{height: '25%', backgroundColor: '#fbfbfb'}}>
-                <div style={{height: '38%', borderBottom: '2px solid #ebebeb', padding: '15px 15px 0'}}>
-                    <div style={{height: '50%', textAlign: 'left'}}>
+            <div className="height25 summaryCover">
+                <div className="height38 commonBorderBottom summaryDiv">
+                    <div className="height50 alignLeft">
                         <span>거래 등록 수수료</span>
-                        <span style={{float: 'right'}}>1% (0 BTC)</span>
+                        <span className="floatRight">1% (0 BTC)</span>
                     </div>
-                    <div style={{height: '50%', textAlign: 'left'}}>
+                    <div className="height50 alignLeft">
                         <span>총 판매 수량</span>
-                        <span style={{float: 'right'}}>0 BTC</span>
+                        <span className="floatRight">0 BTC</span>
                     </div>
                 </div>
-                <div style={{height: '38%', borderBottom: '2px solid #ebebeb', padding: '15px 15px 0'}}>
-                    <div style={{height: '50%', textAlign: 'left'}}>
+                <div className="height38 commonBorderBottom summaryDiv">
+                    <div className="height50 alignLeft">
                         <span>비트코인 현재가</span>
-                        <span style={{float: 'right'}}>70,000,000 원</span>
+                        <span className="floatRight">70,000,000 원</span>
                     </div>
-                    <div style={{height: '50%', textAlign: 'left'}}>
+                    <div className="height50 alignLeft">
                         <span>판매가격</span>
-                        <span style={{float: 'right'}}>70,000,000 원 (0.0%)</span>
+                        <span className="floatRight">70,000,000 원 (0.0%)</span>
                     </div>
                 </div>
-                <div style={{height: '24%', borderBottom: '2px solid #ebebeb', padding: '15px 15px 0'}}>
-                    <div style={{textAlign: 'left'}}>
+                <div className="height24 commonBorderBottom summaryDiv summaryDiv">
+                    <div className="alignLeft">
                         <span>거래 성사시 받을 금액</span>
-                        <span style={{float: 'right'}}>0 원</span>
+                        <span className="floatRight">0 원</span>
                     </div>
                 </div>
             </div>

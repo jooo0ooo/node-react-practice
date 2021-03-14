@@ -42,117 +42,105 @@ html, body {
     font-size: 25px;
 }
 
-.starSpan svg {
-    transform: scale(1);
-    padding-top: none;
-}
-
-.starSpan li {
-    margin-right: 1px !important;
-}
-
-.alarmSpan svg {
-    transform: scale(1.5);
-}
-
-.radioDiv div {
-    width: 100%;
-    /*border: 1px solid #ebebeb;*/
-    padding: 2px;
-    background-color: #ebebeb;
-    border-radius: 10px
-}
-
-.radioDiv label {
-    width: 50%;
-}
-
-.radioDiv label:first-child {
-    border-radius: 10px;
-    border-color: #ebebeb;
-}
-
-.radioDiv label:last-child {
-    border-radius: 10px;
-    border-color: #ebebeb;
-}
-
-.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
-    color: white;
-    background-color: black;
-    border-color: #ebebeb;
-}
-
-.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
-    color: black;
-    border-color: #ebebeb;
-}
-
-.ant-radio-button-wrapper-checked:not([class*=' ant-radio-button-wrapper-disabled']).ant-radio-button-wrapper:first-child {
-    border-right-color: #ebebeb;
-}
-.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):first-child {
-    border-color: #ebebeb;
-}
-
-.ant-radio-button-wrapper {
-    color: black;
-    background-color: #ebebeb;
-}
-
-.ant-radio-button-wrapper:hover {
-    color: black;
-    border-color: #ebebeb;
-    background-color: lightgray;
-}
-
-
-
-.addDiv .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector {
-    height: 50px;
-}
-
-.addDiv .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-item {
-    line-height: 48px;
-}
-
-.addDiv .ant-radio-group-large .ant-radio-button-wrapper {
-    height: 50px;
-    font-size: 16px;
-    line-height: 48px;
-}
-
-.addDiv label:first-child {
-    width: 100px;
-    border-radius: 10px;
-    border-color: #ebebeb;
-    margin-left: 5px;
-}
-
-.addDiv label:last-child {
-    width: 100px;
-    border-radius: 10px;
-    border-color: #ebebeb;
-    margin-left: 5px;
-}
-
 .ant-select-selector {
     border-radius: 5px !important;
-}
-
-.addDiv input {
-    height: 40px;
-    text-align: right;
 }
 
 .ant-input-affix-wrapper {
     border-radius: 5px;
 }
 
-.addTagDiv input {
-    height: 25px
+/*
+common css
+*/
+.height15 {
+    height: 15%;
 }
 
-.additionalInfoDiv textarea {
-    border: 1px solid white;
+.height18 {
+    height: 18%;
+}
+
+.height20 {
+    height: 20%;
+}
+
+.height25 {
+    height: 25%;
+}
+
+.height30 {
+    height: 30%;
+}
+
+.height22 {
+    height: 22%;
+}
+
+.height24 {
+    height: 24%;
+}
+
+.height38 {
+    height: 38%;
+}
+
+.height40 {
+    height: 40%;
+}
+
+.height50 {
+    height: 50%;
+}
+
+.height60 {
+    height: 60%;
+}
+
+.height67 {
+    height: 67%;
+}
+
+.height70 {
+    height: 70%;
+}
+
+.height85 {
+    height: 85%;
+}
+
+.width50 {
+    width: 50%;
+}
+
+.width100 {
+    width: 100%;
+}
+
+.bgWhite {
+    background-color: white;
+}
+
+.commonBorderBottom {
+    border-bottom: 2px solid #ebebeb;
+}
+
+.p15 {
+    padding: 15px;
+}
+
+.alignLeft {
+    text-align: left;
+}
+
+.alignRight {
+    text-align: right;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
 }

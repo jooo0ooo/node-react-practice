@@ -1,0 +1,12 @@
+.settingMenu {
+    padding: 15px 20px;
+    font-weight: bold;
+}
+
+.settingMenu span:first-child {
+    float: left;
+}
+
+.settingMenu span:last-child {
+    float: right;
+}

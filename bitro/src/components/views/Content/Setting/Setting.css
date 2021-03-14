@@ -1,0 +1,89 @@
+.setting3BtnDiv div {
+    display: inline-block;
+    width: 27%;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 10px;
+    float: left;   
+}
+
+.setting3BtnDiv div:first-child {
+    /*margin: 13px 10px 10px !important;*/
+    margin-left: 5% !important;
+}
+
+.settingMenuFirstSection {
+    margin-bottom: 5%;
+}
+
+.versionDiv {
+    padding: 25px 20px;
+    text-align: left;
+    color: gray;
+    font-size: 0.9rem;
+}
+
+.logoutDiv {
+    width: 25%;
+    height: 100%;
+    display: inline-block;
+    float: left;
+}
+
+.logoutDiv div {
+    margin-top: 15px;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.profileDiv {
+    width: 75%;
+    height: 100%;
+    display: inline-block;
+    float: left;
+    text-align: left;
+}
+
+.profileDiv img {
+    max-height: 100%;
+    display: inline-block;
+    margin-bottom: 35px;
+}
+
+.starSpan svg {
+    transform: scale(1);
+    padding-top: none;
+}
+
+.starSpan li {
+    margin-right: 1px !important;
+}
+
+.profileDiv > span {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.profileDiv > span span:nth-child(2){
+    line-height: 20px;
+}
+
+.profileDiv > span span:nth-child(3){
+    margin-left: 5px;
+}
+
+.settingMenuDiv {
+    overflow: scroll;
+}
+
+.settingMenuDiv {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.settingMenuDiv::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}

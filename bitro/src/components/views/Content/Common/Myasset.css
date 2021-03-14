@@ -1,0 +1,17 @@
+.labelSpan {
+    float: left;
+    padding: 10px 20px;   
+}
+
+.numberSpan {
+    float: right;
+    padding: 10px 20px;
+    text-align: right;
+    font-weight: bold;
+    line-height: 17px;
+}
+
+.krwSpan {
+    font-size: 13px;
+    color: gray;
+}

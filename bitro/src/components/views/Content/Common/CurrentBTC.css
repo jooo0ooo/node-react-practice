@@ -1,0 +1,13 @@
+.priceSpan {
+    float: left;
+    padding-top: 6%;
+}
+
+.alarmSpan {
+    float: right;
+    padding-top: 6%;
+}
+
+.alarmSpan svg {
+    transform: scale(1.5);
+}

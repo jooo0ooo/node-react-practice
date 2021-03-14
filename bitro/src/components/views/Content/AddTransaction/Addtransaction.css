@@ -1,0 +1,93 @@
+.addDivFirst {
+    padding-top: 3.7%;
+}
+
+.addDivSecond {
+    text-align: left;
+}
+
+.addDivOption {
+    margin-bottom: 20px;
+}
+
+.addDivOptionDiff {
+    margin-bottom: 40px;
+}
+
+.addDiv .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector {
+    height: 50px;
+}
+
+.addDiv .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-item {
+    line-height: 48px;
+}
+
+.addDiv .ant-radio-group-large .ant-radio-button-wrapper {
+    height: 50px;
+    font-size: 16px;
+    line-height: 48px;
+}
+
+.addDiv label:first-child {
+    width: 100px;
+    border-radius: 10px;
+    border-color: #ebebeb;
+    margin-left: 5px;
+}
+
+.addDiv label:last-child {
+    width: 100px;
+    border-radius: 10px;
+    border-color: #ebebeb;
+    margin-left: 5px;
+}
+
+.addDiv input {
+    height: 40px;
+    text-align: right;
+}
+
+.addTagDiv input {
+    height: 25px
+}
+
+.additionalInfoDiv textarea {
+    border: 1px solid white;
+}
+
+.radioDiv {
+    width: 50% !important;
+    display: inline-block;
+    padding: 0 !important;
+}
+
+.radioDiv div {
+    width: 100%;
+    padding: 2px;
+    background-color: white !important;
+    border-radius: 10px
+}
+
+.addTransactionTitle {
+    padding-top: 5%;
+}
+
+.addTransactionTitle > span:nth-child(2n + 1) {
+    font-weight: bold;
+}
+
+.addTransactionTitle > span:first-child {
+    color: red;
+}
+
+.myAssetDiv {
+    padding-top: 2.5%;
+}
+
+.summaryCover {
+    background-color: #fbfbfb;
+}
+
+.summaryDiv {
+    padding: 15px 15px 0;
+}
