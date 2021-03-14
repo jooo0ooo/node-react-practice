@@ -1,11 +1,34 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom';
 import { MdHome, MdAdd, MdCached, MdMenu } from 'react-icons/md'
 import './Footer.css';
 
 function Footer() {
+    const location = useLocation();
+    const [FooterCss, setFooterCss] = useState<React.CSSProperties>({
+        opacity: '1',
+        visibility: 'visible',
+        transition: 'opacity 500ms linear, visibility 0s linear'
+    });
+
+    useEffect(() => {
+        if (location.pathname === '/add') {
+            setFooterCss({
+                opacity: '0',
+                visibility: 'hidden',
+                transition: 'opacity 500ms linear, visibility 0s linear 500ms'        
+            });
+        } else {
+            setFooterCss({
+                opacity: '1',
+                visibility: 'visible',
+                transition: 'opacity 500ms linear, visibility 0s linear'
+            });
+        }
+    }, [location]);
+
     return (
-        <nav className="footer">
+        <nav className="footer" style={FooterCss}>
             <Link className="menu" to="/">
                 <MdHome /><br/>
                 홈

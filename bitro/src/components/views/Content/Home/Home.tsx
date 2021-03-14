@@ -16,7 +16,7 @@ function Home() {
                     </span>
                 </div>
             </div>
-            <div style={{height: '100%', backgroundColor: 'white'}}>
+            <div style={{height: '85%', backgroundColor: 'white'}}>
                 <div>
                     <span style={{float: 'left', padding: '10px 20px'}}>나의 자산</span>
                     <span style={{float: 'right', padding: '10px 20px', textAlign: 'right', fontWeight: 'bold', lineHeight: '17px'}}>

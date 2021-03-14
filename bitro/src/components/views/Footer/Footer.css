@@ -105,3 +105,54 @@ html, body {
     border-color: #ebebeb;
     background-color: lightgray;
 }
+
+
+
+.addDiv .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector {
+    height: 50px;
+}
+
+.addDiv .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-item {
+    line-height: 48px;
+}
+
+.addDiv .ant-radio-group-large .ant-radio-button-wrapper {
+    height: 50px;
+    font-size: 16px;
+    line-height: 48px;
+}
+
+.addDiv label:first-child {
+    width: 100px;
+    border-radius: 10px;
+    border-color: #ebebeb;
+    margin-left: 5px;
+}
+
+.addDiv label:last-child {
+    width: 100px;
+    border-radius: 10px;
+    border-color: #ebebeb;
+    margin-left: 5px;
+}
+
+.ant-select-selector {
+    border-radius: 5px !important;
+}
+
+.addDiv input {
+    height: 40px;
+    text-align: right;
+}
+
+.ant-input-affix-wrapper {
+    border-radius: 5px;
+}
+
+.addTagDiv input {
+    height: 25px
+}
+
+.additionalInfoDiv textarea {
+    border: 1px solid white;
+}

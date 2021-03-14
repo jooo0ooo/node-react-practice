@@ -16,7 +16,7 @@ function MyTransaction() {
                     </span>
                 </div>
             </div>
-            <div style={{height: '100%', backgroundColor: 'white'}}>
+            <div style={{height: '85%', backgroundColor: 'white'}}>
                 <div className="radioDiv" style={{width: '100%', padding: '15px'}}>
                     <Radio.Group defaultValue="processing" size="large">
                         <Radio.Button value="processing">진행 중인 거래</Radio.Button>

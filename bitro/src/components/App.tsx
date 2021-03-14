@@ -1,10 +1,10 @@
 import React, { Suspense } from 'react';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
-import AddTransaction from './components/views/Content/AddTransaction/AddTransaction';
-import Home from './components/views/Content/Home/Home';
-import MyTransaction from './components/views/Content/MyTransaction/MyTransaction';
-import Setting from './components/views/Content/Setting/Setting';
-import Footer from './components/views/Footer/Footer';
+import AddTransaction from './views/Content/AddTransaction/AddTransaction';
+import Home from './views/Content/Home/Home';
+import MyTransaction from './views/Content/MyTransaction/MyTransaction';
+import Setting from './views/Content/Setting/Setting';
+import Footer from './views/Footer/Footer';
 
 function App() {
   return (
