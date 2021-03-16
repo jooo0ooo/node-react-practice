@@ -38,29 +38,29 @@ function Setting() {
             </div>
             <div className="settingMenuDiv">
                 <div className="height40 bgWhite settingMenuFirstSection maxHeight155">
-                    <SettingMenu leftOption="내 정보" rightOption="&gt;"/>
+                    <SettingMenu menuTitle="내 정보"/>
                     <br/>
 
-                    <SettingMenu leftOption="리뷰" rightOption="&gt;"/>
+                    <SettingMenu menuTitle="리뷰"/>
                     <br/>
                     
-                    <SettingMenu leftOption="앱 설정" rightOption="&gt;"/>
+                    <SettingMenu menuTitle="앱 설정"/>
                     <br/>
                 </div>
                 <div className="bgWhite settingMenuSecondSection">
-                <SettingMenu leftOption="공지사항" rightOption="&gt;"/>
+                <SettingMenu menuTitle="공지사항"/>
                     <br/>
 
-                    <SettingMenu leftOption="거래하는 방법" rightOption="&gt;"/>
+                    <SettingMenu menuTitle="거래하는 방법"/>
                     <br/>
 
-                    <SettingMenu leftOption="FAQ" rightOption="&gt;"/>
+                    <SettingMenu menuTitle="FAQ"/>
                     <br/>
 
-                    <SettingMenu leftOption="이용약관 및 개인정보처리방침" rightOption="&gt;"/>
+                    <SettingMenu menuTitle="이용약관 및 개인정보처리방침"/>
                     <br/>
                     
-                    <SettingMenu leftOption="카카오톡 문의하기" rightOption="&gt;"/>
+                    <SettingMenu menuTitle="카카오톡 문의하기"/>
                     
                     <div className="versionDiv bgWhite">Web Version 1.0.0</div>
                 </div>

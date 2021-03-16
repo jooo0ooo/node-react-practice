@@ -3,15 +3,14 @@ import './SettingMenu.css';
 
 
 interface Props {
-    leftOption: string;
-    rightOption: string;
+    menuTitle: string;
 }
 
 function SettingMenu(props: Props) {
     return (
         <div className="settingMenu">
-            <span>{props.leftOption}</span>
-            <span>{props.rightOption}</span>
+            <span>{props.menuTitle}</span>
+            <span>&gt;</span>
         </div>
     )
 }
