@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@nestjs/typeorm": "^7.1.5",
+    "typeorm": "^0.2.31"
+  }
+}
