@@ -11,7 +11,7 @@ export class UserController {
     return this.userService.getAllUsers();
   }
 
-  @Get('/test')
+  @Get('/login')
   getHello(): string {
     return "hey!";
   }

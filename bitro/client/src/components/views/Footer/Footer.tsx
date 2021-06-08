@@ -16,7 +16,7 @@ function Footer() {
             setFooterCss({
                 opacity: '0',
                 visibility: 'hidden',
-                transition: 'opacity 500ms linear, visibility 0s linear 500ms'        
+                transition: 'opacity 500ms linear, visibility 0s linear 500ms'
             });
         } else {
             setFooterCss({
@@ -29,7 +29,7 @@ function Footer() {
         let els = document.getElementsByClassName('menu');
         Array.prototype.forEach.call(els, function(el) {
             if(el.classList.contains('active')) {
-                el.classList.remove('active');   
+                el.classList.remove('active');
             }
         });
 

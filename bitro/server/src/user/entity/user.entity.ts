@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn, Index } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, Index, CreateDateColumn } from 'typeorm';
 
 @Entity()
 @Index(['userId', 'email'])
@@ -9,9 +9,6 @@ export class User {
   @Column({ length: 40, unique: true })
   userId: string;
 
-  @Column({ length: 256, nullable: false })
-  password: string;
-
   @Column({ length: 40 })
   name: string;
 
@@ -20,4 +17,10 @@ export class User {
 
   @Column({ length: 40, unique: true })
   email: string;
+
+  @Column({ length: 256, unique: true })
+  token: string;
+
+  @CreateDateColumn()
+  createdDt: Date;
 }

@@ -15,7 +15,7 @@ const KakaoLoginButton = () => {
       // 중복 initialization 방지
       if (!kakao.isInitialized()) {
         // 두번째 step 에서 가져온 javascript key 를 이용하여 initialize
-        kakao.init('key')
+        kakao.init('0bcf2265e9d132ca66fa1037b1be2270')
       }
 
       kakao.Auth.authorize({
